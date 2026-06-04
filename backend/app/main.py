@@ -23,6 +23,10 @@ from app.agents.orchestrator import run_pipeline
 
 app = FastAPI(title="Competitive Intelligence Multi-Agent System API")
 
+@app.get("/api/test")
+def test():
+    return {"status": "ok"}
+
 # Configure CORS so the frontend can communicate with the backend
 app.add_middleware(
     CORSMiddleware,
